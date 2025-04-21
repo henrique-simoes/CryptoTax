@@ -1,2 +1,4 @@
 # CryptoTax
-Crypto P&amp;L and Tax for the brazilian government
+Crypto P&amp;L and Tax for the Brazilian government
+
+This script processes cryptocurrency transactions to calculate taxable gains and optionally mark-to-market (MTM) values using FIFO, LIFO, or HIFO accounting methods. It reads data from an Excel file containing trades, deposits, and purchases, then fetches daily USD-BRL exchange rates from Brazil’s Central Bank (PTAX). It standardizes all transactions into acquisitions and sales, adjusting values using FX rates and accounting for trading fees. For each asset, it tracks inventory over time, calculates average cost, and determines realized gains month by month. It then generates a monthly summary CSV with quantities bought, sold, remaining, total gains, and cost basis. If the --mtm flag is enabled, it also looks up historical price data for each asset near month-end, estimates the unrealized profit based on current value versus average cost, and outputs that to a separate MTM CSV.
